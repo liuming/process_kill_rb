@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "process_kill"
+
+puts ProcessKill.execute([ARGV[0].to_i]).inspect
