@@ -62,11 +62,11 @@ describe ProcessKill do
         allow(described_class).to receive(:kill).and_raise(ProcessKill::ProcessNotFoundError)
       end
 
-      it { expect(subject[pids.first]).to include({attempts: [1], killed: true, resolved: true, signal: "TERM"})}
+      it { expect(subject[pids.first][:steps]).to include({attempts: [1], error: 'not_found', signal: "TERM"})}
     end
 
     context "failed to kill the process" do
-      it { expect(subject[pids.first]).to include({attempts: [1,1,1,1,1], killed: false , resolved: false, signal: "TERM"})}
+      it { expect(subject[pids.first][:steps]).to include({attempts: [1,1,1,1,1], signal: "TERM"})}
     end
 
     context "has no permission to the process" do
@@ -74,7 +74,7 @@ describe ProcessKill do
         allow(described_class).to receive(:kill).and_raise(ProcessKill::ProcessPermissionError)
       end
 
-      it { expect(subject[pids.first]).to include({attempts: [1], killed: false , resolved: true, signal: "TERM"})}
+      it { expect(subject[pids.first][:steps]).to include({attempts: [1], error: 'no_permission', signal: "TERM"})}
     end
   end
 end
