@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ming Liu"]
   spec.email         = ["liuming@lmws.net"]
 
-  spec.summary       = %q{Kill process with different signals}
+  spec.summary       = %q{Kill processes with different signals and intervals}
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/liuming/process_kill/"
+  spec.homepage      = "https://github.com/liuming/process_kill_rb/"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
