@@ -1,6 +1,6 @@
 # ProcessKill
 
-ProcessKill is a Ruby implemenation of the flow to attemp to kill processes with different signals and intervals.
+ProcessKill is a Ruby implementation of the flow to attempt to kill processes with different signals and intervals.
 
 ## Installation
 
