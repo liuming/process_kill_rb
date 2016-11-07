@@ -30,5 +30,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/process_kill.
+Bug reports and pull requests are welcome on GitHub at https://github.com/liuming/process_kill_rb
 
